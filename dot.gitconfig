@@ -1,0 +1,23 @@
+[user]
+	name = Kosuke Matsuda
+	email = 
+[github]
+	user = matsuda
+	token = 
+[alias]
+	co = checkout
+	ci = commit -a
+	st = status
+	up = pull --rebase
+	a  = add
+	b  = branch
+	c  = commit
+	d  = diff
+	staged = diff --cached
+	unstaged = diff
+	both = diff HEAD
+	oneline = log --pretty=oneline --abbrev-commit
+	amend = commit --amend
+[color]
+	status = auto
+	diff = auto
