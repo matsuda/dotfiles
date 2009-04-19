@@ -4,6 +4,11 @@
 [github]
 	user = matsuda
 	token = 
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	interactive = auto
 [alias]
 	co = checkout
 	ci = commit -a
@@ -13,11 +18,13 @@
 	b  = branch
 	c  = commit
 	d  = diff
+	info = config --list
 	staged = diff --cached
 	unstaged = diff
 	both = diff HEAD
 	oneline = log --pretty=oneline --abbrev-commit
 	amend = commit --amend
-[color]
-	status = auto
-	diff = auto
+[apply]
+	whitespace = nowarn
+[core]
+	excludesfile = /Users/matsuda/.gitignore
