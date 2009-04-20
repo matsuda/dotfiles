@@ -42,4 +42,4 @@
 [apply]
 	whitespace = nowarn
 [core]
-	excludesfile = /Users/matsuda/.gitignore
+	excludesfile = 
