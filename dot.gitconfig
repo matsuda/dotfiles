@@ -26,9 +26,9 @@
 	ui = true
 [alias]
 	co = checkout
-	ci = commit -a
+	ci = commit
 	st = status
-	up = pull --rebase
+	up = pull
 	a  = add
 	b  = branch
 	c  = commit
