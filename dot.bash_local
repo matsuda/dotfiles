@@ -1,0 +1,20 @@
+function gemdir {
+  if [[ -z "$1" ]] ; then
+    # echo "gemdir expects a parameter, which should be a valid RVM Ruby selector"
+    cd $(rvm gemdir)
+    pwd
+  else
+    rvm "$1"
+    cd $(rvm gemdir)
+    pwd
+  fi
+}
+
+function cdwork {
+  if [[ -z "$1" ]] ; then
+    cd ~/dev/work
+  else
+    cd ~/dev/work/"$1"
+  fi
+  pwd
+}

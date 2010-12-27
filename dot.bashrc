@@ -23,8 +23,8 @@ alias safari="open -a Safari"
 alias prev="open -a Preview"
 alias cot="open -a CotEditor"
 alias exl="open -a 'Microsoft Excel'"
-# alias mate="open -a textmate"
-# alias emacsc="open -a Emacs"
+alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs -nw"
+#alias emacs="/usr/local/Cellar/emacs/23.2/Emacs.app/Contents/MacOS/Emacs"
 
 # 
 # for export
@@ -43,9 +43,8 @@ if test -x /usr/local/bin/emacs; then
 else
     EDITOR=/usr/bin/emacs; export EDITOR
 fi
-
-export SVN_EDITOR=emacs
-export GIT_EDITOR=emacs
+export SVN_EDITOR="/Applications/Emacs.app/Contents/MacOS/Emacs -nw"
+export GIT_EDITOR="/Applications/Emacs.app/Contents/MacOS/Emacs -nw"
 
 # LV
 if test -x /usr/local/bin/lv; then
@@ -56,5 +55,5 @@ else
 fi
 export LESSCHARSET=utf-8
 
-# specfic local
-alias cdwork='cd dev/work/'
+# 各環境依存設定
+[[ -e "$HOME/.bash_local" ]] && source "$HOME/.bash_local"
