@@ -43,3 +43,4 @@
 	whitespace = nowarn
 [core]
 	excludesfile = ~/.gitignore
+	editor = emacs
