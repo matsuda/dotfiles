@@ -12,11 +12,15 @@ shopt -s checkwinsize
 PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/mysql/bin:/usr/X11/bin
 export PATH
 
+# ANSI Color
+export LSCOLORS=exfxcxdxbxegedabagacad
+alias ls='ls -G'
+
 # RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 # for alias
-alias ls='ls -lav'
+alias ll='ls -lavG'
 alias less=lv
 alias firefox="open -a Firefox"
 alias safari="open -a Safari"
