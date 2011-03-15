@@ -3,11 +3,11 @@ export GISTY_DIR="$HOME/dev/gists"
 function gemdir {
   if [[ -z "$1" ]] ; then
     # echo "gemdir expects a parameter, which should be a valid RVM Ruby selector"
-    cd $(rvm gemdir)
+    cd "$(rvm gemdir)/gems"
     pwd
   else
     rvm "$1"
-    cd $(rvm gemdir)
+    cd "$(rvm gemdir)/gems"
     pwd
   fi
 }
