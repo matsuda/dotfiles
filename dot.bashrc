@@ -16,9 +16,6 @@ export PATH
 export LSCOLORS=exfxcxdxbxegedabagacad
 alias ls='ls -G'
 
-# RVM
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-
 # for alias
 alias ll='ls -lavG'
 alias less=lv
@@ -42,6 +39,7 @@ export BLOCKSIZE=k
 # 
 # editor
 # 
+# PSQL_EDITOR
 if test -x /usr/local/bin/emacs; then
     EDITOR=/usr/local/bin/emacs; export EDITOR
 else
@@ -61,3 +59,7 @@ export LESSCHARSET=utf-8
 
 # 各環境依存設定
 [[ -e "$HOME/.bash_local" ]] && source "$HOME/.bash_local"
+
+# RVM
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
