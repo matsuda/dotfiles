@@ -20,3 +20,6 @@ function cdwork {
   fi
   pwd
 }
+
+# Android
+# export PATH=$PATH:/Applications/android-sdk-mac_86/tools
