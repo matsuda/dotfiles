@@ -39,7 +39,7 @@ fi
 export LESSCHARSET=utf-8
 
 if [ -f ~/.bashrc ]; then
-   . ~/.bashrc
+   source ~/.bashrc
 fi
 
 # RVM
