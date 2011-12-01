@@ -22,4 +22,4 @@ function cdwork {
 }
 
 # Android
-# export PATH=$PATH:/Applications/android-sdk-mac_86/tools
+# export PATH=$PATH:/Developer/android-sdk-macosx/tools
