@@ -5,9 +5,10 @@
 .svn
 *.pyc
 *~
-*.a
 *.o
 .#*
 :2e*
 *.mode1v3
 *.pbxuser
+# unknown to ignore this ext...
+# *.a
