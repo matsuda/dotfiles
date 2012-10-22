@@ -1,5 +1,7 @@
-if [ -f ~/git-completion.bash ]; then
-   source ~/git-completion.bash
+if [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
+   source /usr/local/etc/bash_completion.d/git-prompt.sh
+   source /usr/local/etc/bash_completion.d/git-completion.bash
+   export GIT_PS1_SHOWUNTRACKEDFILES=1
    export PS1='[\u@\h \W:$(__git_ps1)]\$ '
 fi
 
