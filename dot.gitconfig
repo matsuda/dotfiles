@@ -44,3 +44,4 @@
 [core]
 	excludesfile = ~/.gitignore
 	editor = emacs
+	pager = lv -c
