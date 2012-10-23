@@ -21,13 +21,13 @@ export BLOCKSIZE=k
 # editor
 # 
 # PSQL_EDITOR
-if test -x /usr/local/bin/emacs; then
-    EDITOR=/usr/local/bin/emacs; export EDITOR
-else
-    EDITOR=/usr/bin/emacs; export EDITOR
-fi
-export SVN_EDITOR="/Applications/Emacs.app/Contents/MacOS/Emacs -nw"
-export GIT_EDITOR="/Applications/Emacs.app/Contents/MacOS/Emacs -nw"
+# if test -x /usr/local/bin/emacs; then
+#     EDITOR=/usr/local/bin/emacs; export EDITOR
+# else
+#     EDITOR=/usr/bin/emacs; export EDITOR
+# fi
+# export SVN_EDITOR="/Applications/Emacs.app/Contents/MacOS/Emacs -nw"
+# export GIT_EDITOR="/Applications/Emacs.app/Contents/MacOS/Emacs -nw"
 
 # LV
 if test -x /usr/local/bin/lv; then
@@ -42,8 +42,10 @@ if [ -f ~/.bashrc ]; then
    source ~/.bashrc
 fi
 
-# RVM
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-
-# 各環境依存設定
-[[ -e "$HOME/.bash_local" ]] && source "$HOME/.bash_local"
+######################################
+# rbenv
+# https://github.com/sstephenson/rbenv
+######################################
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+source ~/.rbenv/completions/rbenv.bash
