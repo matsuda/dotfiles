@@ -6,7 +6,7 @@ PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/mysql/bin:/usr/X11/
 export PATH
 
 # ANSI Color
-export LSCOLORS=exfxcxdxbxegedabagacad
+export LSCOLORS=gxfxcxdxbxegedabagacad
 
 # 
 # for export
