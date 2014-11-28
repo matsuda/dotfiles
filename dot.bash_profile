@@ -50,6 +50,8 @@ fi
 # rbenv
 # https://github.com/sstephenson/rbenv
 ######################################
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-source ~/.rbenv/completions/rbenv.bash
+export RBENV_ROOT=/usr/local/var/rbenv
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+#export PATH="$HOME/.rbenv/bin:$PATH"
+#eval "$(rbenv init -)"
+#source ~/.rbenv/completions/rbenv.bash
