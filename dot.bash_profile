@@ -55,3 +55,11 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 #export PATH="$HOME/.rbenv/bin:$PATH"
 #eval "$(rbenv init -)"
 #source ~/.rbenv/completions/rbenv.bash
+
+######################################
+# nodebrew
+######################################
+if [ -f /usr/local/bin/nodebrew ]; then
+   export PATH=$HOME/.nodebrew/current/bin:$PATH
+   export NODEBREW_ROOT=/usr/local/var/nodebrew
+fi

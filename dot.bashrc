@@ -5,6 +5,10 @@ if [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
    export PS1='[\u@\h \W:$(__git_ps1)]\$ '
 fi
 
+if [ -f /usr/local/etc/bash_completion.d/nodebrew ]; then
+   source /usr/local/etc/bash_completion.d/nodebrew
+fi
+
 # Make bash check it's window size after a process completes
 shopt -s checkwinsize
 
