@@ -51,6 +51,6 @@
 	editor = emacs
 	pager = lv -c
 [includeIf "gitdir:~/Dev/github/"]
-        path = .gitconfig-private
+	path = .gitconfig-private
 [includeIf "gitdir:~/Dev/bitbucket/"]
-        path = .gitconfig-private
+	path = .gitconfig-private
