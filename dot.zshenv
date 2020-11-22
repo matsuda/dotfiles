@@ -39,3 +39,17 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 if [ -f /usr/local/bin/nodebrew ]; then
    export PATH=$HOME/.nodebrew/current/bin:$PATH
 fi
+
+######################################
+# flutter
+######################################
+if [ -e "$HOME/Dev/flutter/bin" ]; then
+    export PATH="$PATH:$HOME/Dev/flutter/bin"
+fi
+
+######################################
+# adb
+######################################
+if [ -d $HOME/Library/Android/sdk/platform-tools ]; then
+   export PATH=$PATH:$HOME/Library/Android/sdk/platform-tools
+fi
