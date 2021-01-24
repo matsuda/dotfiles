@@ -55,5 +55,5 @@
 	path = .gitconfig-private
 [includeIf "gitdir:~/Dev/bitbucket/"]
 	path = .gitconfig-private
-[interactive]
-	diffFilter = delta --color-only --theme OneHalfDark
+#[interactive]
+#	diffFilter = delta --color-only --theme OneHalfDark
