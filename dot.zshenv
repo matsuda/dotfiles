@@ -7,7 +7,13 @@ export LSCOLORS=gxfxcxdxbxegedabagacad
 export BLOCKSIZE=k
 
 # PATH
-export PATH=/usr/local/bin:$PATH
+######################################
+# homebrew
+######################################
+# for Apple silicon
+export PATH="/opt/homebrew/bin:$PATH"
+# for Intel
+#export PATH=/usr/local/bin:$PATH
 
 # LV
 if test -x /usr/local/bin/lv; then
@@ -19,13 +25,13 @@ fi
 export LESSCHARSET=utf-8
 
 
-if [ -f ~/.zshrc ]; then
-   source ~/.zshrc
-fi
+#if [ -f ~/.zshrc ]; then
+#   source ~/.zshrc
+#fi
 
-if [ -f ~/.zsh_local ]; then
-   source ~/.zsh_local
-fi
+#if [ -f ~/.zsh_local ]; then
+#   source ~/.zsh_local
+#fi
 
 ######################################
 # rbenv
@@ -41,10 +47,25 @@ if [ -f /usr/local/bin/nodebrew ]; then
 fi
 
 ######################################
+# nodenv
+######################################
+if [ -e "$HOME/.nodenv" ]; then
+    export PATH=$HOME/.nodenv/bin:$PATH
+    eval "$(nodenv init -)"
+fi
+
+######################################
 # flutter
 ######################################
 if [ -e "$HOME/Dev/flutter/bin" ]; then
     export PATH="$PATH:$HOME/Dev/flutter/bin"
+fi
+
+######################################
+# flutterfire (firebase for flutter)
+######################################
+if [ -e "$HOME/.pub-cache" ]; then
+    export PATH="$PATH":"$HOME/.pub-cache/bin"
 fi
 
 ######################################

@@ -14,7 +14,6 @@ alias prev="open -a Preview"
 # via) https://gist.github.com/d-kuro/352498c993c51831b25963be62074afa
 #
 # for zsh-completions
-fpath=(/usr/local/share/zsh-completions $fpath)
 # zshの補完
 fpath=($(brew --prefix)/share/zsh/site-functions $fpath)
 # Homebrewのコマンド補完を有効にする
@@ -48,16 +47,19 @@ setopt correct
 
 #
 # https://qiita.com/funyatomo/items/372f02dcd4d708d218b1
+# https://sue445.hatenablog.com/entry/2012/08/30/005627
 #
-setopt PROMPT_SUBST
-source /usr/local/etc/bash_completion.d/git-prompt.sh
+source $(brew --prefix)/etc/bash_completion.d/git-prompt.sh
+#source $(brew --prefix)/etc/bash_completion.d/git-completion.bash
 
-#GIT_PS1_SHOWDIRTYSTATE=1
-#GIT_PS1_SHOWUPSTREAM=1
-GIT_PS1_SHOWUNTRACKEDFILES=1
-#GIT_PS1_SHOWSTASHSTATE=1
+GIT_PS1_SHOWDIRTYSTATE=true
+GIT_PS1_SHOWUPSTREAM=auto
+GIT_PS1_SHOWUNTRACKEDFILES=true
+GIT_PS1_SHOWSTASHSTATE=true
 
-PROMPT='[%n@%m:%~]$(__git_ps1 " (%s)")%# '
+# プロンプトの表示設定(好きなようにカスタマイズ可)
+setopt PROMPT_SUBST ; PS1='%F{green}%n@%m%f: %F{cyan}%~%f %F{red}$(__git_ps1 "(%s)")%f\$ '
+#PROMPT='[%n@%m:%~]$(__git_ps1 " (%s)")%# '
 
 # page up/downキーでのヒストリー補完
 bindkey "^[[5~" history-beginning-search-backward
