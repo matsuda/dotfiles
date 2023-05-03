@@ -77,3 +77,44 @@ setopt share_history
 setopt hist_ignore_dups
 # ヒストリに追加されるコマンドが古いものと同じなら古いものを削除
 setopt hist_ignore_all_dups
+
+######################################
+# rbenv
+######################################
+if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
+
+######################################
+# nodebrew
+######################################
+if [ -f /usr/local/bin/nodebrew ]; then
+   export PATH=$HOME/.nodebrew/current/bin:$PATH
+fi
+
+######################################
+# nodenv
+######################################
+if [ -e "$HOME/.nodenv" ]; then
+    export PATH=$HOME/.nodenv/bin:$PATH
+    eval "$(nodenv init -)"
+fi
+
+######################################
+# flutter
+######################################
+if [ -e "$HOME/Dev/flutter/bin" ]; then
+    export PATH="$PATH:$HOME/Dev/flutter/bin"
+fi
+
+######################################
+# flutterfire (firebase for flutter)
+######################################
+if [ -e "$HOME/.pub-cache" ]; then
+    export PATH="$PATH":"$HOME/.pub-cache/bin"
+fi
+
+######################################
+# adb
+######################################
+if [ -d $HOME/Library/Android/sdk/platform-tools ]; then
+   export PATH=$PATH:$HOME/Library/Android/sdk/platform-tools
+fi
