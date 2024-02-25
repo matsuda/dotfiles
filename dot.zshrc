@@ -79,6 +79,21 @@ setopt hist_ignore_dups
 setopt hist_ignore_all_dups
 
 ######################################
+# git
+######################################
+function gitmain() {
+  git config --global user.name "matsuda"
+  git config --global user.email "kosukematsuda@gmail.com"
+  source ~/.zshrc
+}
+
+function gitsub() {
+  git config --global user.name "mtsd"
+  git config --global user.email "mtsd@live.com"
+  source ~/.zshrc
+}
+
+######################################
 # rbenv
 ######################################
 if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi

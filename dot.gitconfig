@@ -51,9 +51,18 @@
 	excludesfile = ~/.gitignore
 	editor = emacs
 	pager = lv -c
-[includeIf "gitdir:~/Dev/github/"]
-	path = .gitconfig-private
-[includeIf "gitdir:~/Dev/bitbucket/"]
-	path = .gitconfig-private
+[includeIf "gitdir:~/Dev/github/**"]
+	path = ~/.gitconfig-main
+[includeIf "gitdir:~/Dev/github-sub/**"]
+	path = ~/.gitconfig-sub
+[includeIf "gitdir:~/Dev/bitbucket/**"]
+	path = ~/.gitconfig-main
 #[interactive]
 #	diffFilter = delta --color-only --theme OneHalfDark
+[init]
+	defaultBranch = main
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
