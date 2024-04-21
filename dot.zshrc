@@ -133,3 +133,10 @@ fi
 if [ -d $HOME/Library/Android/sdk/platform-tools ]; then
    export PATH=$PATH:$HOME/Library/Android/sdk/platform-tools
 fi
+
+######################################
+# curl
+######################################
+if [ -f /opt/homebrew/opt/curl/bin ]; then
+   export PATH="/opt/homebrew/opt/curl/bin:$PATH"
+fi
