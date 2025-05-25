@@ -99,13 +99,6 @@ function gitsub() {
 if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
 
 ######################################
-# nodebrew
-######################################
-if [ -f /usr/local/bin/nodebrew ]; then
-   export PATH=$HOME/.nodebrew/current/bin:$PATH
-fi
-
-######################################
 # nodenv
 ######################################
 if [ -e "$HOME/.nodenv" ]; then
