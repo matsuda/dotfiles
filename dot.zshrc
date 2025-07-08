@@ -99,6 +99,11 @@ function gitsub() {
 if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
 
 ######################################
+# pyenv
+######################################
+if which pyenv > /dev/null; then eval "$(pyenv init --path)"; fi
+
+######################################
 # nodenv
 ######################################
 if [ -e "$HOME/.nodenv" ]; then
