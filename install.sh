@@ -43,3 +43,14 @@ for file in $DOTFILES; do
 done
 
 echo "✅ すべてのシンボリックリンクを作成しました！"
+
+# `git-prompt.sh`が環境になければインストール
+GIT_PROMPT_INSTALL_SCRIPT="$DOTFILES_DIR/install_git-prompt.sh"
+
+if [ -f "$GIT_PROMPT_INSTALL_SCRIPT" ]; then
+  echo "Running install_git-prompt.sh ..."
+  source "$GIT_PROMPT_INSTALL_SCRIPT"
+else
+  echo "Error: install_git-prompt.sh が見つかりません"
+  exit 1
+fi
