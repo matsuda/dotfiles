@@ -1,0 +1,30 @@
+#compdef npm
+
+_npm() {
+  local si=$IFS
+
+  if [ "${words[-1]}" = 'run' -o "${words[-2]}" = 'run' ]; then
+    if [ -r package.json ]; then
+      cat package.json | jq --exit-status -r '.scripts' > /dev/null
+      if [ $? = 0 ]; then
+        _values \
+          'scripts' \
+            $(cat package.json | jq -r '.scripts | keys[]')
+      else
+        _message 'project has no scripts'
+      fi
+    else
+      _message 'not npm project'
+    fi
+  else
+    _values \
+      'subcommands' \
+        $(COMP_CWORD=$((CURRENT-1)) \
+        COMP_LINE=$BUFFER \
+        COMP_POINT=0 \
+        npm completion -- "${words[@]}" \
+        2>/dev/null)
+  fi
+
+  IFS=$si
+}
